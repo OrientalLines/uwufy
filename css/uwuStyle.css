@@ -1,12 +1,6 @@
 /* Nunito */
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap');
 
-html, body {
-  margin: 0px;
-  font-size: 16px;
-  height: 100%;
-  background-color: #e2b7bf !important;
-}
 
 a {
   text-decoration: none !important;
@@ -23,14 +17,6 @@ a:hover {
   
 }
 
-.heading {
-  padding-top: 1rem;
-  display: block;
-  font-family: Nunito;
-  font-weight: 700;
-  font-size: 4rem;
-  color: #edf7f6;
-}
 
 .subheading {
   padding-bottom: 1rem;

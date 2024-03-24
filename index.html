@@ -20,15 +20,64 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/uwuinate.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
-  <title>UwU</title>
+  <title>UwUfy</title>
 </head>
+
+<style>
+  html, body {
+    margin: 0;
+    font-size: 16px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    animation: gradientAnimation 20s infinite alternate;
+    background: linear-gradient(-45deg, #f8b9b9, #e2c5ca, #f3d7dc, #eec7b8);
+    background-size: 400% 400%;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .heading {
+    padding-top: 1rem;
+    display: inline-block;
+    font-family: Nunito;
+    font-weight: 700;
+    font-size: 4rem;
+    /* Rainbow Text Effect */
+    animation: rainbowAnimation 5s infinite;
+    background: linear-gradient(90deg, #ff9999, #66ccff, #99ff99, #ffcc99);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  @keyframes rainbowAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+</style>
 
 <body>
   <div id="alert">
   </div>
   <div class="container text-center">
-    <span class="heading">UwUinator</span>
+    <span class="heading">UwUinator fork</span>
     <span class="subheading">OwO *notices text* <a href="ppppinator.html">What's this?</a></span>
     <div class="row">
       <button class="button col-auto ml-auto mr-4" onclick="uwuinate();">✧ UwUinate ✧</button>
