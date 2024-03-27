@@ -33,31 +33,40 @@ let replacements = [
   [/ы/g, "ыу"],    
   [/угу/g, "уву"],    
   [/гу/g, "wу"],    
-  [/е/g, "ё"],     
+  // [/е/g, "ё"],     
   [/л(?!ь)/g, "в"],
   [/р/g, "w"],     
   [/ж/g, "з"],     
   [/ш/g, "с"],     
   [/щ/g, "сч"],    
-  [/ь/g, "w"],
+  // [/ь/g, "w"],
   [/ов/g, "ёвь"],
   [/яу/g, "мяу"],
   [/ау/g, "мау"],
-  [/ни/g, "ньи"],     
-  [/ль/g, "лw"],   
-  [/рь/g, "рw"],   
-  [/ть/g, "тw"],   
-  [/дь/g, "дw"],   
-  [/чь/g, "чw"],   
-  [/щь/g, "щw"]    
+  [/ни/g, "ньи"],    
+];
+
+const probableReplacements = [
+  [/(л)(?!ь)/g, "ль"],   
+  [/(р)(?!ь)/g, "рь"],   
+  [/(т)(?!ь)/g, "ть"],   
+  [/(д)(?!ь)/g, "дь"],   
+  [/(ч)(?!ь)/g, "чь"],   
+  [/(щ)(?!ь)/g, "щь"]
 ];
 
 function convertString(input) {
   for (let [pattern, replacement] of replacements) {
     input = input.replace(pattern, replacement);
   }
+  for (let [pattern, replacement] of probableReplacements) {
+    if (pattern.test(input) && Math.random() < 0.5) {
+      input = input.replace(pattern, replacement);
+    }
+  }
   return input;
 }
+
 
 function uwuWord(word, index) {
   var uwu = "";
